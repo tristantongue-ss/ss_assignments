@@ -16,7 +16,6 @@ public class AddingMultipleValues {
 		
 		Scanner in = new Scanner(System.in);
 		System.out.println("How many values?");
-		
 		int n = in.nextInt();
 		
 		System.out.println("pls enter your values");
@@ -25,13 +24,12 @@ public class AddingMultipleValues {
 			values.add(k);
 		}
 		
-		System.out.println(values);
-		
 		for(Double d : values) {
 			sum += d;
 		}
 		
 		System.out.printf("The sum is %f", sum);
+		in.close();
 
 	}
 
