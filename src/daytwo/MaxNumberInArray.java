@@ -9,6 +9,9 @@ public class MaxNumberInArray {
 		int currenthighest = 0;
 		int ourrow = 0;
 		int ourcol = 0;
+		ArrayList<Integer> location = new ArrayList<Integer>();
+		
+		
 		for (int row = 0; row < mat.length; row++) {
 			for (int col = 0; col < mat[row].length; col++) {
 				int currentvalue = mat[row][col];
@@ -19,7 +22,7 @@ public class MaxNumberInArray {
 				}
 			}
 		}
-		ArrayList<Integer> location = new ArrayList<Integer>();
+		
 		location.add(ourrow);
 		location.add(ourcol);
 		
