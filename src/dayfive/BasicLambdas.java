@@ -51,6 +51,13 @@ public class BasicLambdas {
 				  .collect(Collectors.joining(","));
 		System.out.println(sortedList);
 		
+		
+	}
+	
+	public static void filterList(List<String> list) {
+		List<String> sortedList = list.stream().filter(s -> s.length() == 3).filter(s -> s.startsWith("a")).collect(Collectors.toList());
+		System.out.println(sortedList);
+		
 	}
 	
 	
