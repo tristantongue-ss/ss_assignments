@@ -7,7 +7,7 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.time.OffsetDateTime;
 
 public class DateTimeAPI {
@@ -21,15 +21,14 @@ public class DateTimeAPI {
 		return birthday;
 	}
 	
-	public TemporalAdjuster previousThursday(LocalDate randomDate) {
+	public LocalDate previousThursday(LocalDate randomDate) {
 		LocalDate date = randomDate;
-		TemporalAdjuster prevThur = date.with(TemporalAdjuster.previous(DayOfWeek.THURSDAY));
+		LocalDate prevThur = date.with(TemporalAdjusters.previous(DayOfWeek.THURSDAY));
 		return prevThur;
 	}
 	
 	public static void main(String[] args) {
-		getBirthday();
-		
+		getBirthday();	
 
 	}
 

@@ -15,10 +15,12 @@ public class Recursion {
 			position++;
 		}
 		
+		
+		// first check, subtract current number from target, begins another line of recursive calls
 		if (groupSum(position, nums, target - adjacentSum)) {
 			return true;
 		}
-		
+		// other line of recursive calls, ignoring the current sum, ensures we find all possible permutations
 		if (groupSum(position, nums, target)) {
 		      return true;
 		    }
